@@ -1,23 +1,19 @@
 import logo from './logo.svg';
-import './App.css';
+import Form from './component/Form';
+import ContactInformation from './component/ContactInformation';
+import { data } from './data';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex flex-col justify-center items-center w-[100vw] h-[100vh] '>
+      <div>
+        <h1 className='text-black font-bold text-2xl uppercase'>Contact us or</h1>
+        <h1 className='text-black font-bold text-2xl uppercase'>Raise a complaint</h1>
+      </div>
+      <div className='flex gap-10 w-[700px] h-[500px] mt-5 shadow-xl'>
+        <ContactInformation/>
+        <Form data={data}/>
+      </div>
     </div>
   );
 }
